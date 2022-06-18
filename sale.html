@@ -76,23 +76,21 @@
                               <div class="mint-limited-wrapper" style="font-family: ComicSansMSB; font-size: 25px;">
                                 <h3 class="h3 mint-limited">LIMITED SALE</h3>
                                 <h3 class="h3">
-                                  <span id="nft_left">4931</span> / 5555
+                                  <span id="nft_left"></span> / <span id="totalSupply">5555</span> <h5 id="ape-max" style="display: none;">5 Max</h5>
                                 </h3>
                               </div>
+                              <div class="alert-container" id="alert-container"></div>
                               <div class="mint-zone">
                                 <div class="mint-quantity-wrapper">
                                   <div class="ticket-quantity">
-                                    <button class="ticket-quantity-minus" type="button" id="btn-minus">-</button>
-                                    <input id="totalNFT" type="number" min="1" placeholder="1" name="quantity" class="ticket-quantity-input" readonly="" value="1">
-                                    <button class="ticket-quantity-plus" type="button" id="btn-plus">+</button>
+                                    <button class="ticket-quantity-minus" type="button" id="minus">-</button>
+                                    <h5 class="ticket-quantity-input"><p style="margin-top:7px!important;" id="lnprice">1</p></h5>
+                                    <button class="ticket-quantity-plus" type="button" id="plus">+</button>
                                   </div>
-                                  <span class="total-price">Price: <span id="totalETH" style="margin-left:3px;">0.1</span>0 ETH </span>
+                                  <span class="total-price">Price: <span id="price" style="margin-left:3px;">0.10</span> ETH </span>
                                 </div>
-                                <button id="connectBtn" class="button _2nd mint-button">CONNECT WALLET</button>
-                                <button id="checkoutBtn" class="button _2nd mint-button" style="width: 320px; display: none;">MINT</button>
-                                <span class="mint-error">
-                                  <p class="p1" id="status"></p>
-                                </span>
+                                <button id="connect" class="button _2nd mint-button">CONNECT WALLET</button>
+                                <button id="transfer" class="button _2nd mint-button" style="width: 320px; display: none;">MINT</button>
                               </div>
                             </div>
                           </div>
@@ -107,11 +105,17 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/audio.js"></script>
     <script src="assets/js/wow.js"></script>
+    <script src="javascript/alert.js"></script>
     <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.4/dist/index.js"></script>
     <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.5.5/dist/umd/index.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/web3@1.6.1/dist/web3.min.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.1.umd.min.js" type="text/javascript"></script>
+   <!-- <script type="text/javascript" src="/js/app.js"></script> -->
+    <script type="text/javascript" src="settings.js"></script>
+    <script src="javascript/alert.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
 
     <script>
         db = window.localStorage;
